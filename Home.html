@@ -5,11 +5,12 @@
     <script src="./JS/Navigation.js" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width" charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./CSS/TicTacToe.css">
     <title>Vitor Kern</title>
 </head>
     <style>
         * {box-sizing: border-box;}
-
+        
         html {
             font-family: sans-serif;
             background-image: url("https://i.imgur.com/lHjYzzm.jpg");
@@ -50,9 +51,8 @@
             position: relative;
             float: left;
             width:  200px;
-            height: 200px;
+            height: 150px;
             padding: 5px;
-            object-fit:scale-down;
         }
 
         img.circleFrame {
@@ -106,7 +106,7 @@
     </style>
 
 <body>
-    <a href="#default" class="logo">Vitor Kern - Game &amp; Web Developer</a>
+    <a class="logo">Vitor Kern - Game &amp; Web Developer</a>
     <ul>
         <li data-rel="1" class="active">Sobre Mim</li>
         <li data-rel="2">Projetos</li>
@@ -127,7 +127,7 @@
                 <img class="PortfolioImage" src=".\Images\Curling.png">
                 <br>Curling Gaudério</br>
             </a>
-            <a href="www.assetstore.unity3d.com/en/#!/content/65249">
+            <a href="https://www.assetstore.unity3d.com/en/#!/content/65249">
                 <img class="PortfolioImage" src=".\Images\MouseGesture.png">
                 <br>Mouse Gesture Interpretation</br>
             </a>
@@ -139,6 +139,40 @@
                 <img class="PortfolioImage" src=".\Images\NotSoSuper.png">
                 <br>Not So Super</br>
             </a>
+        </div>
+    </section>
+    <section>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title text-center">Tic Tac Toe Game</h4>
+                        </div>
+                        <div class="modal-body">
+                          <h3>Welcome to the Tic Tac Toe Game!</h3>
+                          <p>It’s time to choose your figure.</p>
+                          <p id="test"></p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" id="x" class="btn" data-dismiss="modal" onClick="setFig(this.id)"><span class="fa fa-times"><span></button>
+                          <button type="button" id="o" class="btn" data-dismiss="modal" onClick="setFig(this.id)"><span class="fa fa-circle-o"><span></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="game">
+                    <div id="first" onClick="icon(this.id)" class="game-field"></div>
+                    <div id="second" onClick="icon(this.id)" class="game-field"></div>
+                    <div id="third" onClick="icon(this.id)" class="game-field"></div>
+                    <div id="fourth" onClick="icon(this.id)" class="game-field"></div>
+                    <div id="fifth" onClick="icon(this.id)" class="game-field"></div>
+                    <div id="sixth" onClick="icon(this.id)" class="game-field"></div>
+                    <div id="seventh" onClick="icon(this.id)" class="game-field"></div>
+                    <div id="eight" onClick="icon(this.id)" class="game-field"></div>
+                <div id="nineth" onClick="icon(this.id)" class="game-field"></div>
+            </div>
         </div>
     </section>
 </body>
