@@ -2,6 +2,7 @@
 
 <head>
     <script src="./jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="./JS/Navigation.js" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width" charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Vitor Kern</title>
@@ -60,7 +61,7 @@
             border-style: solid;
             border-width: 1px;
             border-color: #391F50;
-            margin-top: 2%;
+            margin-top: 8.5%;
         }
 
         #lista {
@@ -85,10 +86,6 @@
         section:first-of-type {
             display: block;
         }
-        nav {
-            float: left;
-            width: 200px;
-        }
         ul {
             list-style-type: none;
             float: right;
@@ -107,16 +104,6 @@
             background: blueviolet;
         }
     </style>
-
-
-<script>
-    $(document).ready(function($) {
-    $('li').click(function() {
-      $(this).addClass('active').siblings('li').removeClass('active');
-      $('section:nth-of-type('+$(this).data('rel')+')').stop().fadeIn(400, 'linear').siblings('section').stop().fadeOut(400, 'linear'); 
-    });
-  })(jQuery);
-</script>
 
 <body>
     <a href="#default" class="logo">Vitor Kern - Game &amp; Web Developer</a>
