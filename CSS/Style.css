@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    background-image: url("https://i.imgur.com/lHjYzzm.jpg");
+    overflow: scroll;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+
+}
+
+a {
+    color: antiquewhite;
+    font: bold;
+    text-align: center;
+}
+
+body {
+    width: 70%;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+button {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 15%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+img {
+    width: 200px;
+}
+
+img.PortfolioImage {
+    max-width: 100%;
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 150px;
+    padding: 5px;
+}
+
+img.circleFrame {
+    border-radius: 50%;
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #391F50;
+    margin-top: 8.5%;
+}
+
+#lista {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    flex: 1;
+
+}
+
+article h4 {
+    text-align: justify;
+    padding: 1vw;
+}
+
+section {
+    background: #7f7f7f;
+    position: relative;
+    width: 80%;
+    display: none;
+    float: right;
+    margin-top: 10%;
+    min-height: 400px;
+    color: #fff;
+    border: 4px solid #000;
+}
+
+section:first-of-type {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.active {
+    background: blueviolet;
+}

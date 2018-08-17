@@ -5,105 +5,9 @@
     <script src="./JS/Navigation.js" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width" charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./CSS/TicTacToe.css">
+    <link rel="stylesheet" href="./CSS/Style.css">
     <title>Vitor Kern</title>
 </head>
-    <style>
-        * {box-sizing: border-box;}
-        
-        html {
-            font-family: sans-serif;
-            background-image: url("https://i.imgur.com/lHjYzzm.jpg");
-            overflow: scroll;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
-            height: 100%; 
-            
-        }
-        a {
-            color:antiquewhite;
-            font: bold;
-            text-align: center;
-        }
-        body {
-            width: 70%;
-            max-width: 100%;
-            margin: 20px auto;
-        }
-        button {
-            font-size: 18px;
-            line-height: 1.5;
-            width: 15%;
-        }
-        .flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        img {
-            width: 200px;
-        }
-        
-        img.PortfolioImage {
-            max-width: 100%;
-            position: relative;
-            float: left;
-            width:  200px;
-            height: 150px;
-            padding: 5px;
-        }
-
-        img.circleFrame {
-            border-radius: 50%;
-            position: absolute;
-            border-style: solid;
-            border-width: 1px;
-            border-color: #391F50;
-            margin-top: 8.5%;
-        }
-
-        #lista {
-            display: flex;
-            align-items: center;
-            justify-content:flex-end;
-            flex-wrap: wrap;
-            flex: 1;
-            
-        }
-        section {
-            background: #7f7f7f;
-            position: relative;
-            width: 80%;
-            display: none;
-            float: right;
-            margin-top: 10%;
-            min-height: 400px;
-            color: #fff;
-            border: 4px solid #000;
-        }
-        section:first-of-type {
-            display: block;
-        }
-        ul {
-            list-style-type: none;
-            float: right;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        li {
-            float: left;
-            color: white;
-            text-align: center;
-            padding: 16px;
-            text-decoration: none;
-        }
-        .active {
-            background: blueviolet;
-        }
-    </style>
 
 <body>
     <a class="logo">Vitor Kern - Game &amp; Web Developer</a>
@@ -115,7 +19,7 @@
     </ul>
     <section>
         <article>
-        <h4>Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem </h4>
+            <h4>I am Vitor, a Game design, programmer student and a gaming enthusiast. Since I played my first videogame I have been an enthusiast in game design techniques and game development. Nowadays, I am studying my degree in Digital Games, while I am trying to improve my 3D modelling skills. </h4>
         </article>
     </section>
     <div>
@@ -139,40 +43,52 @@
                 <img class="PortfolioImage" src=".\Images\NotSoSuper.png">
                 <br>Not So Super</br>
             </a>
+            <a href="./Tictactoe.html">
+                <img class="PortfolioImage" src=".\Images\Tictactoe.png">
+                <br>TICTACTOE</br>
+            </a>
         </div>
     </section>
     <section>
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                          <h4 class="modal-title text-center">Tic Tac Toe Game</h4>
-                        </div>
-                        <div class="modal-body">
-                          <h3>Welcome to the Tic Tac Toe Game!</h3>
-                          <p>It’s time to choose your figure.</p>
-                          <p id="test"></p>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" id="x" class="btn" data-dismiss="modal" onClick="setFig(this.id)"><span class="fa fa-times"><span></button>
-                          <button type="button" id="o" class="btn" data-dismiss="modal" onClick="setFig(this.id)"><span class="fa fa-circle-o"><span></button>
-                        </div>
-                      </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title text-center">Tic Tac Toe Game</h4>
                     </div>
-                  </div>
-                
-                  <div class="game">
-                    <div id="first" onClick="icon(this.id)" class="game-field"></div>
-                    <div id="second" onClick="icon(this.id)" class="game-field"></div>
-                    <div id="third" onClick="icon(this.id)" class="game-field"></div>
-                    <div id="fourth" onClick="icon(this.id)" class="game-field"></div>
-                    <div id="fifth" onClick="icon(this.id)" class="game-field"></div>
-                    <div id="sixth" onClick="icon(this.id)" class="game-field"></div>
-                    <div id="seventh" onClick="icon(this.id)" class="game-field"></div>
-                    <div id="eight" onClick="icon(this.id)" class="game-field"></div>
-                <div id="nineth" onClick="icon(this.id)" class="game-field"></div>
+                    <div class="modal-body">
+                        <h3>Welcome to the Tic Tac Toe Game!</h3>
+                        <p>It’s time to choose your figure.</p>
+                        <p id="test"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="x" class="btn" data-dismiss="modal" onClick="setFig(this.id)">
+                            <span class="fa fa-times">
+                                <span>
+                        </button>
+                        <button type="button" id="o" class="btn" data-dismiss="modal" onClick="setFig(this.id)">
+                            <span class="fa fa-circle-o">
+                                <span>
+                        </button>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <div class="game">
+            <div id="first" onClick="icon(this.id)" class="game-field"></div>
+            <div id="second" onClick="icon(this.id)" class="game-field"></div>
+            <div id="third" onClick="icon(this.id)" class="game-field"></div>
+            <div id="fourth" onClick="icon(this.id)" class="game-field"></div>
+            <div id="fifth" onClick="icon(this.id)" class="game-field"></div>
+            <div id="sixth" onClick="icon(this.id)" class="game-field"></div>
+            <div id="seventh" onClick="icon(this.id)" class="game-field"></div>
+            <div id="eight" onClick="icon(this.id)" class="game-field"></div>
+            <div id="nineth" onClick="icon(this.id)" class="game-field"></div>
+        </div>
         </div>
     </section>
 </body>
