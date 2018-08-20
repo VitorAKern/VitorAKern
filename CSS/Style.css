@@ -84,19 +84,22 @@ img.Logo {
 article h4 {
     text-align: justify;
     padding: 1vw;
+    position: relative;
 }
 
 section {
-    background: #7f7f7f;
-    position: relative;
-    width: 80%;
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    width: 55vw;
     display: none;
     float: right;
     margin-top: 2vw;
+    margin-left: 13vw;
     min-height: 400px;
     color: #fff;
-    border: 4px solid #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 
 section:first-of-type {
     display: block;
@@ -129,6 +132,10 @@ ul #down {
     width:80vw;
 }
 
+@font-face {
+    font-family: font1;
+    src: url(.\Font\INVASION2000.ttf);
+}
 
 .active {
     background: blueviolet;
