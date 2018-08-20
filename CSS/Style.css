@@ -39,8 +39,19 @@ button {
 }
 
 img {
-    width: 200px;
+    width: 20vw;
 }
+
+#one {
+    float:left; 
+    margin-right:20px;
+    width:140px;
+}
+  #two { 
+    overflow:hidden;
+    margin:10px;
+    min-height:170px;
+  }
 
 img.PortfolioImage {
     max-width: 100%;
@@ -53,11 +64,22 @@ img.PortfolioImage {
 
 img.circleFrame {
     border-radius: 50%;
-    position: absolute;
+    position: relative;
     border-style: solid;
     border-width: 1px;
     border-color: #391F50;
-    margin-top: 8.5%;
+    margin-top: 1vw;
+    width: 12vw;
+    float: left;
+    margin-left: 0;
+}
+
+img.Logo {
+    position: relative; 
+}
+
+h1 div {
+    display: inline;
 }
 
 #lista {
