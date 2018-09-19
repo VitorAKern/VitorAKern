@@ -9,6 +9,7 @@ var gridValue = 0;
 
 function fnLoad() {
     var select = document.getElementById("grid");
+    
     for (i = 3; i <= 3; i += 1) {
         var option = document.createElement('option');
         select.options[select.options.length] = new Option(i + ' X ' + i, i);
@@ -40,15 +41,31 @@ function fnChoose(e) {
             prevTurn = turn;
             turn = turn === "X" ? "O" : "X";
             if (fndecide(targetElement, prevTurn)) {
-                alert(prevTurn + ' has won the game');
+                showModal(true, prevTurn);
                 fnNewGame();
             } else if ((score['X'] + score['O']) == (gridValue * gridValue)) {
-                alert('Draw!');
+                showModal(false, prevTurn);
                 fnNewGame();
             }
         }
     }
 }
+
+function showModal(typeMessage, winner){
+    debugger;
+    var modal = document.getElementById("modalMessage");
+    var span = document.getElementsByClassName("close")[0];
+    var message = "";
+    if (typeMessage == true){
+        message = winner + " ganhou o jogo!!!";
+    }
+    else {
+        message = "EMPATE!!"
+    }
+    modal.find('.modal-body').text(message);
+    modal.modal('show');
+    modal.style.display = "block";
+}(jQuery)
 
 function fndecide(targetElement, prevTurn) {
     var UL = document.getElementById('game');
@@ -125,3 +142,4 @@ function isEven(value) {
     else
         return false;
 }
+

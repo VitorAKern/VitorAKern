@@ -2,18 +2,28 @@
 <title>Tic Tac Toe</title>
 <head>
 <link rel="stylesheet" type="text/css" href="./CSS/TicTacToe.css" />
-<script type="text/javascript" src="./JS/Tictactoe.js"></script>       
+<script src="./jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="./bootstrap.js" type="text/javascript"></script>
+<script type="text/javascript" src="./JS/Tictactoe.js"></script>
 </head>
 <body onload="fnLoad()">
         <div class="container">
-                <div>
+                <div class="headContainer">
                         <select id="grid">
                         </select>
-                        <button name="NewGame" class="newGame" value="Start a New Game" onClick="fnNewGame()">Start a New Game</button>
+                        <button name="NewGame" class="button" value="Start a New Game" onClick="fnNewGame()">Começar Novo Jogo</button>
                 </div>
                 <div class="minContainer">
                         <table class="row" id="game"></table>
                 </div>
+                <div class="headContainer">
+                        <button name="Back" class="button" value="Back" onClick="location.href='Home.html';">Voltar</button>
+                </div>
+        </div>
+
+        <div id="modalMessage" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
         </div>
 </body>
 </html>
